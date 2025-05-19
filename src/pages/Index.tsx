@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Book, Flask, Beaker, Test, ArrowRight } from 'lucide-react';
+import { Book, TestTube, Beaker, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
@@ -24,14 +24,14 @@ const Index = () => {
       description: language === 'en'
         ? 'Methods and techniques for cleaning and making water safe for consumption.'
         : 'طرق وتقنيات لتنظيف المياه وجعلها آمنة للاستهلاك.',
-      icon: <Flask size={20} />
+      icon: <Beaker size={20} />
     },
     {
       title: language === 'en' ? 'Biology & Health' : 'علم الأحياء والصحة',
       description: language === 'en'
         ? 'Essential biological knowledge for health, agriculture and environmental applications.'
         : 'المعرفة البيولوجية الأساسية للتطبيقات الصحية والزراعية والبيئية.',
-      icon: <Test size={20} />
+      icon: <TestTube size={20} />
     },
     {
       title: language === 'en' ? 'First Aid' : 'الإسعافات الأولية',

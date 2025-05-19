@@ -1,5 +1,5 @@
 
-import { Flask, Clock } from 'lucide-react';
+import { TestTube, Clock } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -50,7 +50,7 @@ const ExperimentCard = ({
           <CardTitle className={language === 'ar' ? 'font-arabic' : ''}>
             {title}
           </CardTitle>
-          <Flask size={24} className="text-primary" />
+          <TestTube size={24} className="text-primary" />
         </div>
         <div className="flex items-center gap-2 mt-2">
           <Badge variant="outline" className={getDifficultyColor(difficulty)}>
