@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
-import { Book, Flask, Beaker, Test } from 'lucide-react';
+import { Book, Flask, Beaker, Test, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import KnowledgeCard from '@/components/KnowledgeCard';
@@ -141,7 +142,7 @@ const Index = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 {language === 'en' 
-                  ? 'Tell us what materials you have access to, and we'll help you build your scientific toolkit.'
+                  ? "Tell us what materials you have access to, and we'll help you build your scientific toolkit."
                   : 'أخبرنا ما هي المواد التي يمكنك الوصول إليها، وسنساعدك في بناء مجموعة أدواتك العلمية.'}
               </p>
               <Button size="lg" variant="outline" className="group">
