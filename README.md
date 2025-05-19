@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+🧱 Functional Requirements
 
-## Project info
+Core Pages/Routes:
+/ — Landing Page with Langata-focused introduction
+/energy — GreenEnergyKit (solar, biomass tools)
+/agriculture — UrbanAgriLab (hydroponics, smart farming)
+/health — HealthOS (indigenous medicine + diagnostics)
+/ai-lab — Swahili AI tools for prompt engineering and models
+/waste — TakaScience (recycling & biofuel experiments)
+/community — Forum for youth sharing ideas
+/sync — Offline data sync and USB export/import page
+Components:
+<ExperimentCard /> — Displays a DIY science project
+<LabBuilder /> — Recommender based on available tools
+<UploadData /> — Input results, photos, and sensor logs
+<KnowledgeArchive /> — Offline docs, videos, PDFs (searchable)
+<LanguageSwitch /> — English/Kiswahili toggle
+<ProgressMap /> — Track personal learning + lab goals
+<MentorConnect /> — Submit a question, get replies from diaspora scientists
+State Management:
+Context API for user session + selected module
+IndexedDB or localStorage for offline caching
+Worker thread for sync queue management
+Style & UX:
+TailwindCSS + accessible design
+Youth-friendly fonts, calming colors
+Iconography inspired by Pan-African & indigenous symbolism
+Platform Features:
+PWA Support: Full offline caching
+USB Export/Import: Export JSON data for labs with no internet
+Mesh Sync Support: Option to use Gun.js or IPFS later
+Admin Mode: View local lab stats, upload learning packs
+Dark Mode: For labs running at night with solar power
+🔐 Roles:
 
-**URL**: https://lovable.dev/projects/73585354-5bcf-4760-b260-75d031452a68
+Youth Explorer (Default): Can view, test, submit experiments
+Community Mentor: Can publish labs and reply to others
+Admin (School or NGO): Upload curriculum, manage devices
+💾 Backend API Prompt (Suggested):
 
-## How can I edit this code?
+Use NestJS with TypeORM + SQLite (offline-first, scalable to Postgres). Set up REST endpoints for:
+/experiments — GET, POST, PUT
+/labs — Lab station registration + updates
+/users — Alias-based login + progress tracking
+/sync — Manage queued data export + USB format
+📦 Project Structure
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/73585354-5bcf-4760-b260-75d031452a68) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/73585354-5bcf-4760-b260-75d031452a68) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+aeon-langata/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── ExperimentCard.tsx
+│   │   ├── LabBuilder.tsx
+│   ├── pages/
+│   │   ├── index.tsx
+│   │   ├── energy.tsx
+│   │   ├── agriculture.tsx
+│   │   ├── health.tsx
+│   ├── services/
+│   │   ├── api.ts
+│   │   ├── syncService.ts
+│   ├── assets/
+│   ├── App.tsx
+│   ├── main.tsx
+├── vite.config.ts
+├── tailwind.config.ts
